@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honóra és Alerion Krónikái</title>
+    <style>
+        body {
+            font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #1a1a1a; 
+            color: #2c3e50;
+            overflow: hidden;
+        }
+
+         .background-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('honora_alerion_deepl.jpg');
+            background-size: cover;
+	    background-repeat: no-repeat;
+    	    background-position: center;
+            background-position: center;
+            filter: brightness(0.4) sepia(0.2); 
+            z-index: -1;
+	                 }
+
+        .welcome-card {
+            background: rgba(253, 250, 244, 0.4); 
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 0 40px rgba(0,0,0,0.6);
+            text-align: center;
+            max-width: 600px;
+            border: 2px solid #e7d192;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            color: #1a1a1a;
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+
+        .enter-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: #2c3e50;
+            color: #fdfaf4;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .enter-button:hover {
+            background-color: #8e44ad;
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(142, 68, 173, 0.4);
+        }
+
+        .quote {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #7f8c8d;
+            border-top: 1px solid #e7d192;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background-overlay"></div>
+
+    <div class="welcome-card">
+        <h1>A Tavirózsa Tündér krónikái</h1>
+        <p>Lépj be Honóra, az Idő Tündére és Alerion, a lovag varázslatos világába. Ismerd meg sorsfordító kalandjaikat és végtelen utazásaikat a pillanatokon túl.</p>
+        
+        <a href="honora.html" class="enter-button">Kezdődjön a kaland</a>
+
+        <div class="quote">
+            "Minden óra egy otthon, amit meg kell becsülnünk."
+        </div>
+    </div>
+
+</body>
+</html>
