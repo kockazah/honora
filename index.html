@@ -14,11 +14,10 @@
             align-items: center;
             min-height: 100vh;
             background: #1a1a1a; 
-            color: #2c3e50;
+            color: #ffffff; /* Alapértelmezett szövegszín: fehér */
             overflow: hidden;
         }
 
-        /* --- VIDEÓ HÁTTÉR STÍLUSA --- */
         #bg-video {
             position: fixed;
             top: 50%;
@@ -27,25 +26,25 @@
             min-height: 100%;
             width: auto;
             height: auto;
-            z-index: -2; /* Legalsó réteg */
-            transform: translate(-50%, -50%); /* Tökéletes központosítás */
-            object-fit: cover; /* Kitölti a teret vágás nélkül, mint a background-size: cover */
+            z-index: -2;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
         }
 
-        /* --- SÖTÉTÍTŐ RÉTEG A VIDEÓ FELETT --- */
         .background-overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(255, 255, 255, 0.1); /* Sötétítés, hogy olvasható legyen a szöveg */
-            backdrop-filter: brightness(0.7) sepia(0.2); /* Megtartja az eredeti hangulatot */
-            z-index: -1; /* A videó felett, de a szöveg alatt */
+            background: rgba(0, 0, 0, 0.4); /* Sötétítés a jobb olvashatóságért */
+            backdrop-filter: brightness(0.7) sepia(0.2);
+            z-index: -1;
         }
 
         .welcome-card {
-            background: rgba(253, 250, 244, 0.1); /* Kicsit több átlátszatlanság a jobb olvashatóságért */
+            background: rgba(253, 250, 244, 0.1); 
+            backdrop-filter: blur(10px); /* Tejüveg hatás */
             padding: 50px;
             border-radius: 15px;
             box-shadow: 0 0 40px rgba(0,0,0,0.6);
@@ -62,24 +61,27 @@
         }
 
         h1 {
-            color: #1a1a1a;
+            color: #ffffff; /* Cím színe: fehér */
             font-size: 2.8em;
             margin-bottom: 20px;
             letter-spacing: 2px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7); /* Árnyék az olvashatóságért */
         }
 
         p {
+            color: #ffffff; /* Leírás színe: fehér */
             font-size: 1.2em;
             line-height: 1.6;
             margin-bottom: 40px;
             font-style: italic;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
         }
 
         .enter-button {
             display: inline-block;
             padding: 15px 40px;
-            background-color: #2c3e50;
-            color: #fdfaf4;
+            background-color: #fdfaf4;
+            color: #2c3e50; /* Gomb szövege marad sötét a kontraszt miatt */
             text-decoration: none;
             border-radius: 50px;
             font-size: 1.2em;
@@ -91,16 +93,18 @@
 
         .enter-button:hover {
             background-color: #8e44ad;
+            color: #ffffff;
             transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(142, 68, 173, 0.4);
         }
 
         .quote {
             margin-top: 30px;
             font-size: 0.9em;
-            color: #7f8c8d;
+            color: #ffffff; /* Idézet színe: fehér */
+            opacity: 0.9;   /* Kicsit halványabb, hogy ne legyen túl tolakodó */
             border-top: 1px solid #e7d192;
             padding-top: 20px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
         }
     </style>
 </head>
@@ -108,7 +112,6 @@
 
     <video autoplay muted loop playsinline id="bg-video">
         <source src="video.mp4" type="video/mp4">
-        A böngésződ nem támogatja a videó lejátszását.
     </video>
 
     <div class="background-overlay"></div>
@@ -125,6 +128,4 @@
     </div>
 
 </body>
-
 </html>
-
