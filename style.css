@@ -117,11 +117,16 @@ body.fantasy-page {
     }
 }
 #bg-video {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -1; /* Ez teszi a tartalom mögé */
-  object-fit: cover;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -2;
+    /* A 0.8-as értékkel "távolítjuk" a kamerát, 
+       így a videó 80%-ra megy össze a konténeren belül */
+    transform: translate(-50%, -50%) scale(0.8); 
+    object-fit: cover;
 }
